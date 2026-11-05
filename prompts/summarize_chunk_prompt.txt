@@ -1,0 +1,4 @@
+Summarize the following legal text in clear English. Preserve all essential legal details for information extraction.
+
+Text chunk ({chunk_number}/{total_chunks}):
+<<CHUNK>>

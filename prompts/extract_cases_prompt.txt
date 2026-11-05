@@ -1,0 +1,34 @@
+You are a legal assistant. Translate the content into clear English while preserving legal meaning.
+Return ONLY valid JSON with the exact schema fields.
+All text-based fields must be in English.
+
+Extract the following case into JSON with this schema:
+{
+    "case_id": "string",
+    "decision_date": "YYYY-MM-DD",
+    "plaintiff_name": "string (English only)",
+    "defendant_name": "string (English only)",
+    "court_decision": "Won" | "Lost" | "Settled",
+    "summary": "2-3 sentences (English only)",
+    "language": "English"
+}
+
+Few-shot example (Portuguese input and English output):
+Input (excerpt):
+"Acordao do Tribunal Arbitral Tributario sobre IVA e direito a deducao."
+
+Output:
+{
+    "case_id": "decisao.php?id=12345",
+    "decision_date": "2020-05-10",
+    "plaintiff_name": "Claimant",
+    "defendant_name": "Tax Authority",
+    "court_decision": "Won",
+    "summary": "The arbitral tribunal analyzed VAT deduction and upheld the claim. The decision recognized the right to deduct under the law.",
+    "language": "English"
+}
+
+Case ID: <<CASE_ID>>
+
+Raw text:
+<<RAW_TEXT>>
